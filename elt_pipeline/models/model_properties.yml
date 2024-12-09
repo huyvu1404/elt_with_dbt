@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: sales_value_by_category
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - product_category_name_english
+            - order_year
+            - order_month
+
+  - name: total_order_values_by_category
+    columns:
+      - name: product_category_name_english
+        data_tests:
+            - unique
+            - not_null
+
+  - name: total_order_values_by_customer
+    columns:
+      - name: customer_unique_id
+        data_tests:
+            - unique
+            - not_null
+        

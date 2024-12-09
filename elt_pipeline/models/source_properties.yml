@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ecommerce
+    schema: public
+    tables:
+      - name: olist_customers_dataset
+        columns: 
+          - name: customer_id
+            data_tests:
+              - unique
+              - not_null
+            
+      - name: olist_orders_dataset
+        columns:
+          - name: order_id
+            data_tests:
+              - unique
+              - not_null
+
+      - name: olist_products_dataset
+        columns:
+          - name: product_id
+            data_tests:
+              - unique
+              - not_null
+      - name: olist_order_payments_dataset
+      - name: olist_order_items_dataset
+
+
+
+        

@@ -1,0 +1,17 @@
+services:
+  psql:
+    image: postgres:latest
+    container_name: dbt_postgres
+    ports:
+      - "8080:5432"
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_HOST_AUTH_METHOD: trust
+    networks:
+      - dbt_elt
+
+networks:
+  dbt_elt:
+    driver: bridge

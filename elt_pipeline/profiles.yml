@@ -1,0 +1,12 @@
+elt_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 8080
+      user: postgres
+      password: root
+      dbname: ecommerce
+      schema: public
+      threads: 1
