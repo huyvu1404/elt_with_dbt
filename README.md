@@ -25,7 +25,7 @@ First, start the MinIO, MySQL, and PostgreSQL containers. During this process, r
 ```
 Run
 ``` bash
-dbt build
+  dbt build
 ```
 
 ## Tech Stack
